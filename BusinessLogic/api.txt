@@ -1,0 +1,139 @@
+TransactionLogic::AddPayment(
+	$transactionID, 
+	$paymentTypeID, 
+	$paymentAmount)
+TransactionLogic::DeletePayment($paymentID);
+TransactionLogic::GetPayments($transactionID);
+
+TransactionLogic::AddTransaction(
+	$transactionTypeID, 
+	$transactionNote, 
+	$punchCardID, 
+	$classEnrollmentID, 
+	$isVolunteer, 
+	$attendanceID, 
+	$price)
+TransactionLogic::DeleteTransaction($transactionID)
+TransactionLogic::UpdateTransaction(
+	$transactionID, 
+	$transactionTypeID, 
+	$transactionNote, 
+	$punchCardID, 
+	$classEnrollmentID, 
+	$isVolunteer, 
+	$attendanceID, 
+	$price)
+TransactionLogic::GetTransactions($attendanceID)
+
+PunchCardLogic::GetAllPunchCards()
+PunchCardLogic::AddPunchCard(
+	$customerID,
+	$date,
+	$cardNumber)
+PunchCardLogic::UpdatePunchCard(
+	$punchCardID,
+	$customerID,
+	$date,
+	$cardNumber)
+PunchCardLogic::DeletePunchCard($punchCardID)
+
+PageLogic::GetPageName($uri)
+PageLogic::GetPage()
+
+LibraryLogic::GetAllLibraryItems()
+LibraryLogic::GetLibraryItem($libraryItemID)
+LibraryLogic::AddLibraryItem(
+	$itemName, 
+	$libraryItemTypeID, 
+	$dateAdded)
+LibraryLogic::UpdateLibraryItem(
+	$libraryItemID,
+	$itemName, 
+	$libraryItemTypeID, 
+	$dateAdded)
+LibraryLogic::DeleteLibraryItem($libraryItemID)
+LibraryLogic::CheckoutItem($libraryItemID, $customerID)
+LibraryLogic::GetLibrayCheckouts($libraryItemID)
+LibraryLogic::UpdateLibraryCheckout(
+	$libraryCheckoutID, 
+	$libraryItemID, 
+	$customerID, 
+	$dateCheckedOut, 
+	$dateReturned, 
+	$dueDate)
+LibraryLogic::DeleteLibraryCheckout($libraryCheckoutID)
+
+
+EventLogic::GetAllEvents()
+EventLogic::AddEvent(
+	$eventTypeID,
+	$eventName,
+	$eventDate)
+EventLogic::UpdateEvent(
+	$eventID,
+	$eventTypeID,
+	$eventName,
+	$eventDate)
+EventLogic::DeleteEvent($eventID)
+EventLogic::GetEvent($eventID)
+
+AttendanceLogic::GetEventAttendance($eventID)
+AttendanceLogic::GetCustomerAttendance($customerID)
+AttendanceLogic::AddAttendance(
+	$eventID,
+	$customerID)
+AttendanceLogic::DeleteAttendance($attendanceID)
+
+CustomerLogic::GetAllCustomers()
+CustomerLogic::AddCustomer(
+	$firstName, 
+	$lastName, 
+	$email, 
+	$inMailingList, 
+	$balance, 
+	$birthday, 
+	$isStudent)
+CustomerLogic::UpdateCustomer(
+	$customerID,
+	$firstName, 
+	$lastName, 
+	$email, 
+	$inMailingList, 
+	$balance, 
+	$birthday, 
+	$isStudent)
+CustomerLogic::DeleteCustomer($customerID)
+
+ClassLogic::GetClass($classID)
+ClassLogic::GetAllClasses()
+ClassLogic::AddClass(
+	$className, 
+	$startDate, 
+	$endDate)
+ClassLogic::UpdateClass(
+	$classID, 
+	$className, 
+	$startDate, 
+	$endDate)
+ClassLogic::DeleteClass($classID)
+ClassLogic::EnrollInClass(
+	$classID, 
+	$customerID)
+ClassLogic::DeleteEnrollment($enrollmentID)
+ClassLogic::UnenrollInClass(
+	$classID, 
+	$customerID)
+ClassLogic::GetClassRoster($classID)
+ClassLogic::GetCustomerClasses($customerID)
+ClassLogic::GetCurrentClasses()
+
+CashboxLogic::GetAllCashboxLogs()
+CashboxLogic::GetLatestCashboxCount()
+CashboxLogic::AddCashboxLog(
+	$cashboxCount, 
+	$cashboxNote)
+CashboxLogic::UpdateCashboxLog(
+	$cashboxLogID, 
+	$cashboxCount, 
+	$cashboxNote)
+CashboxLogic::DeleteCashboxLog($cashboxLogID)

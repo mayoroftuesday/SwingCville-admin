@@ -1,0 +1,140 @@
+body
+{
+	padding-left: 316px; /*LC_WIDTH + 2*LC_PAD */
+    margin: 0px;
+    font-family: sans-serif;
+	font-size: 10pt;
+}
+
+#leftColumn
+{
+	width:300px; /*LC_WIDTH*/
+	background-color: gray;
+	float: left;
+	margin-left: -316px; /*-LC_WIDTH + 2*LC_PAD */
+    padding: 8px; /*LC_PAD*/
+    height: 100%;
+}
+    #leftColumn a
+    {
+        display:block;
+        width: 276px; /*LC_WIDTH - 2*A_PAD - 2*A_BORDER*/
+        padding: 10px; /*A_PAD*/
+        border: 2px solid black; /*A_BORDER*/
+        background-color: #c0c0c0;
+        color: black;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    #leftColumn a:hover
+     {
+        background-color: white;    
+    }
+
+#content
+{
+    padding: 8px; /*CONTENT_PAD*/
+}
+
+input, select
+{
+    padding: 2px;
+    margin: 0px;
+    border: 1px solid #aaa;
+    font-size: 10px;
+}
+    input[type=button]
+    {
+        padding: 2px 10px;
+        border-radius: 5px;
+        background-color: #aaaaff;
+        border-color:black;
+        font-weight: bold;
+    }
+    input[type=button]:hover
+    {
+        background-color:white;
+        cursor: pointer;
+    }
+h1
+{
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.layout
+{
+    border-spacing: 0px;
+    border-collapse: collapse;
+    margin-bottom:10px; 
+}
+    .layout th
+	{
+		text-align:left;
+		background-color: #666;
+		color: white;
+		font-weight: bold;
+		padding: 2px;
+        font-size: 10px;
+        border: 1px solid #aaa;
+	}
+	.layout td
+	{
+		vertical-align: top;
+        border: 1px solid #ccc;
+		padding: 5px;
+        font-size: 10px;
+	}
+.layout .layout_details td, .layout .layout_details th
+{
+    text-align:left;
+    background-color: transparent;
+    color:black;
+    font-size: 10px;
+    vertical-align: middle;
+    border-style: none;
+
+}
+.layout .layout_details th
+{
+    font-weight: normal;
+    padding: 0px;
+    border-style: none;
+}
+.layout .layout_details td
+{
+    padding: 1px;
+    font-weight: bold;
+}
+
+.data
+{
+    border-collapse: collapse;
+    border-spacing: 2px;
+}
+.data th, .data td
+{
+    border: 1px solid gray;
+	font-size: 10pt;
+}
+.data th
+{
+    text-align: left;
+    background-color: lightgray;
+	font-weight: bold;
+}
+
+label
+{
+    font-size: smaller;
+    font-style: italic;
+}
+fieldset
+{
+    margin-bottom: 10px;
+}
+tr.selected td
+{
+    background-color: #ffffaa;
+}

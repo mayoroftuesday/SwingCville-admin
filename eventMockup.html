@@ -1,0 +1,312 @@
+<html>
+<head>
+
+<style>
+	body
+	{
+		font-family: sans-serif;
+        font-size: 10px;
+	}
+	input, select
+	{
+		padding: 2px;
+		margin: 0px;
+		border: 1px solid #aaa;
+        font-size: 10px;
+	}
+	input[type=button]
+	{
+		padding: 2px 10px;
+		border-radius: 5px;
+		background-color: #aaaaff;
+		border-color:black;
+		font-weight: bold;
+	}
+	input[type=button]:hover
+	{
+		background-color:white;
+		cursor: pointer;
+	}
+	
+	.layout
+	{
+		border-spacing: 0px;
+		border-collapse: collapse;
+        margin-bottom:10px; 
+	}
+    .layout th
+	{
+		text-align:left;
+		background-color: #666;
+		color: white;
+		font-weight: bold;
+		padding: 2px;
+        font-size: 10px;
+        border: 1px solid #aaa;
+	}
+	.layout td
+	{
+		vertical-align: top;
+		border: 1px solid #aaa;
+		padding: 5px;
+		background-color: #eee;
+        font-size: 10px;
+	}
+	
+	.layout table.data
+	{
+		border-spacing: 2px;
+	}
+	.layout table.data th
+	{
+		text-align:left;
+		font-weight: normal;
+        background-color: transparent;
+		color:black;
+		padding: 0px;
+        font-size: 10px;
+        border-style: none;
+	}
+	.layout table.data td
+	{
+		border-style: none;
+		font-weight: bold;
+		padding: 1px;
+		font-size: 10px;
+        vertical-align: middle;
+	}
+
+</style>
+
+</head>
+<body>
+
+
+    <table class="layout">
+        <tr>
+            <th colspan="2">Event</th>
+            <th>Cashbox</th>
+        </tr>
+        <tr>
+            <td>
+                <table class="data">
+                    <tr>
+                        <th>Type</th>
+                        <th>EventID</th>
+                    </tr>
+                    <tr>
+                        <td>Cats Corner</td>
+                        <td>21</td>
+                    </tr>
+                    <tr>
+                        <th>Name</th>
+                        <th>Date</th>
+                    </tr>
+                    <tr>
+                        <td>Bring a Friend Night</td>
+                        <td>2014-03-05</td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <input type="button" value="Edit" style="height:100%;" />
+            </td>
+            <td>
+                <table class="data">
+                    <tr>
+                        <td></td>
+                        <th>Expected</th>
+                        <th>Actual</th>
+                        <th>Note</th>
+                        <td></td>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <th>Start</th>
+                        <td>400</td>
+                        <td><input type="text" size=3 value="400" /></td>
+                        <td><input type="text" /></td>
+                        <td><input type="button" value="Save" />
+                    </tr>
+                    <tr>
+                        <th>End</th>
+                        <td>550</td>
+                        <td><input type="text" size=3 value="555" /></td>
+                        <td><input type="text" value="Over by 5" /></td>
+                        <td><input type="button" value="Save" /></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <table class="layout">
+        <tr>
+            <th colspan="2">Customer</th>
+            <th colspan="3">Transaction</th>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <select>
+                    <option>New Customer</option>
+                    <optgroup label="Lesson Roster">
+                        <option>Mike Herring</option>
+                        <option>Katie Albert</option>
+                    </optgroup>
+                    <optgroup label="Regular Customers">
+                        <option>Joe Schmoe</option>
+                        <option>Nancy Normal</option>
+                    </optgroup>
+                </select>
+            </td>
+            <td colspan="3">
+                <select>
+                    <option>New Transaction</option>
+                    <option>301 - Lesson Series</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table class="data">
+                    <tr>
+                        <th>CustomerID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Balance</th>
+                    </tr>
+                    <tr>
+                        <td>101</td>
+                        <td>Mike</td>
+                        <td>Herring</td>
+                        <td>$10</td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <th>In Mailing List?</th>
+                        <th>Birthday</th>
+                        <th>Is Student?</th>
+                    </tr>
+                    <tr>
+                        <td>mherring@gmail.com</td>
+                        <td><input type="checkbox" checked="checked" /></td>
+                        <td>1984-11-06</td>
+                        <td><input type="checkbox" /></td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <input type="button" value="Edit" style="height:100%;" />
+            </td>
+            <td>
+                <table class="data">
+                    <tr>
+                        <th>Transaction</th>
+                        <th>Volunteer</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select>
+                                <option>Lesson Series</option>
+                            </select>
+                        </td>
+                        <td><input type="checkbox" checked="checked" /></td>
+                        <td><input size=3 type="text" value="$20.00" /></td>
+                    </tr>
+                    <tr>
+                        <th>Series</th>
+                        <th colspan="2">Note</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select>
+                                <option>Lindy Hop II</option>
+                            </select>
+                        </td>
+                        <td colspan=2><input type="text" size="10" /></td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table class="data">
+                    <tr>
+                        <th>Payment</th>
+                        <th>Amount</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><select><option>Punch Card</option></select></td>
+                        <td><input size="3" type="text" value="15.00" /></td>
+                        <td><input type="button" value="x" /></td>
+                    </tr>
+                    <tr>
+                        <td><select><option>Cash</option></select></td>
+                        <td><input size="3" type="text" value="5.00" /></td>
+                        <td><input type="button" value="x" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan=2><input type="button" value="Add Payment" /></a></td>
+                    </tr>
+                </table>
+            </td>
+            <td><input type="button" value="Submit" style="height:100%;" /></td>
+        </tr>
+    </table>
+
+    <table class="layout">
+				<tr>
+					<th>Attendance Record</th>
+				</tr>
+				<tr>
+					<td>
+						Total Attendance: 50
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+						<table class="data">
+						
+							<tr>
+                                <td></td>
+								<th>CustomerID</th>
+								<th>Customer</th>
+							</tr>
+							<tr>
+                                <td><input type="button" value="x" /></td>
+								<td>101</td>
+								<td>Mike Herring</td>
+							</tr>
+                            <tr>
+                                <td><input type="button" value="x" /></td>
+								<td>101</td>
+								<td>Mike Herring</td>
+							</tr>
+                            <tr>
+                                <td><input type="button" value="x" /></td>
+								<td>101</td>
+								<td>Mike Herring</td>
+							</tr>
+                            <tr>
+                                <td><input type="button" value="x" /></td>
+								<td>101</td>
+								<td>Mike Herring</td>
+							</tr>
+                            <tr>
+                                <td><input type="button" value="x" /></td>
+								<td>101</td>
+								<td>Mike Herring</td>
+							</tr>
+                            <tr>
+                                <td><input type="button" value="x" /></td>
+								<td>101</td>
+								<td>Mike Herring</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+
+
+</body>
+</html>
